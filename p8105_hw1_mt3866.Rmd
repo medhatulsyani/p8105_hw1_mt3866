@@ -1,17 +1,29 @@
 ---
-title: "p8105_hw1_mt3866"
+title: "homework 1"
 output: html_document
 ---
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
 ```
 
 ```{r}
 library(moderndive)
 ```
-
+```{r echo = FALSE}
+library(tidyverse) 
+```
 
 ```{r}
 data("early_january_weather")
 ```
+
+```{r}
+library(tibble)
+```
+
+The variable names in this dataset are `r names(early_january_weather)`.
+The dataset has `r nrow(early_january_weather)` observations and `r ncol(early_january_weather)` variables.
+The mean of the temperature in the dataset is `r mean(pull(early_january_weather, temp))`.
+
+
 
