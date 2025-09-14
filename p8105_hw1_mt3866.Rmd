@@ -1,0 +1,17 @@
+---
+title: "p8105_hw1_mt3866"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+library(moderndive)
+```
+
+
+```{r}
+data("early_january_weather")
+```
+
