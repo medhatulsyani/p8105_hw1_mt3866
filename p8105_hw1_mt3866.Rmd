@@ -25,5 +25,11 @@ The variable names in this dataset are `r names(early_january_weather)`.
 The dataset has `r nrow(early_january_weather)` observations and `r ncol(early_january_weather)` variables.
 The mean of the temperature in the dataset is `r mean(pull(early_january_weather, temp))`.
 
+```{r}
+    ggplot(early_january_weather, aes(x=time_hour, y=temp, color=humid)) + geom_point()
+  
+```
+
+
 
 
