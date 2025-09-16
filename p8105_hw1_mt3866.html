@@ -383,19 +383,16 @@ of a sudden drop at the end.</p>
     vec_char = c(&quot;My&quot;, &quot;homework&quot;, &quot;assignment&quot;, &quot;should&quot;, &quot;have&quot;, &quot;a&quot;, &quot;character&quot;, &quot;length&quot;, &quot;of&quot;, &quot;ten&quot;),
     vec_factor = factor (c(&quot;low&quot;, &quot;low&quot;, &quot;low&quot;, &quot;medium&quot;, &quot;medium&quot;, &quot;medium&quot;, &quot;high&quot;, &quot;high&quot;, &quot;high&quot;, &quot;high&quot;))
   )</code></pre>
-<p>The mean of the random sample in my new dataframe is 0.4074642.</p>
-<p>The mean of the logical vector in my new dataframe is 0.6.</p>
-<p>The mean of the character vector in my new dataframe is NA.</p>
-<p>The mean of the factor vector in my new dataframe is NA.</p>
+<p>The mean of the random sample in my new dataframe is 0.1221397.</p>
+<p>The mean of the logical variable in my new dataframe is 0.6.</p>
+<p>The mean of the character variable in my new dataframe is NA.</p>
+<p>The mean of the factor variable in my new dataframe is NA.</p>
 <p>Taking the mean of random and logical variables work, but taking the
 mean of character and factor variables do not.</p>
-<pre class="r"><code>as.numeric(pull(hw1_df,greater_0))</code></pre>
-<pre><code>##  [1] 0 1 0 1 1 1 1 0 0 1</code></pre>
-<pre class="r"><code>as.numeric(pull(hw1_df,vec_char))</code></pre>
+<pre class="r"><code>as.numeric(pull(hw1_df,greater_0))
+as.numeric(pull(hw1_df,vec_char))</code></pre>
 <pre><code>## Warning: NAs introduced by coercion</code></pre>
-<pre><code>##  [1] NA NA NA NA NA NA NA NA NA NA</code></pre>
 <pre class="r"><code>as.numeric(pull(hw1_df,vec_factor))</code></pre>
-<pre><code>##  [1] 2 2 2 3 3 3 1 1 1 1</code></pre>
 <p>When I used the as.numeric function, it converts the logical
 variables and factor variables to numerical values, but leaves the
 character variables as “NA”. This explains why the mean of my character
