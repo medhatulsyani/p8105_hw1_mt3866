@@ -23,8 +23,9 @@ I loaded the dataset above
 The variable names in this dataset are `r names(early_january_weather)`.
 The dataset has `r nrow(early_january_weather)` observations and `r ncol(early_january_weather)` variables.
 The mean of the temperature in the dataset is `r mean(pull(early_january_weather, temp))`.
+The numeric values of variables in this dataset are `r skimr::skim(early_january_weather)`
 
-I used inline code to identify the variable names, numerical values, size of the dataset,
+I used inline code to identify the variable names, numerical values, size of the data set,
 and mean of the temperature variable.
 
 ```{r}
