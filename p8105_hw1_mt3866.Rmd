@@ -21,9 +21,14 @@ data("early_january_weather")
 I loaded the dataset above
 
 The variable names in this dataset are `r names(early_january_weather)`.
+Regarding the values/descriptive statistics of important variables, the mean year is 2013, the mean dew point temperature is 28.06, the mean humidity is 65.48, the mean wind direction is 208.19, the mean wind speed is 8.23, the mean wind gust is 22.53, the mean precipitation is 0, the mean pressure is 1,022.55 and the mean visibility is 8.52. I got this through the skimr::skim code
 The dataset has `r nrow(early_january_weather)` observations and `r ncol(early_january_weather)` variables.
 The mean of the temperature in the dataset is `r mean(pull(early_january_weather, temp))`.
-The numeric values of variables in this dataset are `r skimr::skim(early_january_weather)`
+
+```{r results = "hide"}
+skimr::skim(early_january_weather)
+```
+
 
 I used inline code to identify the variable names, numerical values, size of the data set,
 and mean of the temperature variable.
